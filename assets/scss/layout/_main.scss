@@ -1,0 +1,50 @@
+ @use '../abstracts/variables' as var;
+
+
+ .presentation {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     max-width: 100%;
+     gap: 5rem;
+
+
+     .accroche {
+         border: 2px solid red;
+         max-width: 40%;
+         backdrop-filter: blur(30px);
+
+
+         .text_accroche {
+             color: var.$primary-color;
+             font-size: 1.5rem;
+             flex-wrap: wrap;
+             margin: 1.5rem;
+
+             &:hover {
+                 transform: scale(1.05);
+                 transition: transform 0.3s ease;
+             }
+         }
+
+     }
+
+     .me-img {
+
+         max-width: 100%;
+         align-items: center;
+         background-size: cover;
+         background-position: center;
+
+     }
+
+     .me {
+         align-items: center;
+         width: 100%;
+         overflow: hidden;
+     }
+ }

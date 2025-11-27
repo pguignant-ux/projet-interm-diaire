@@ -1,0 +1,59 @@
+@media screen and (max-width: 425px) {
+
+    .liens {
+        display: none;
+    }
+
+    .presentation {
+        position: static;
+        transform: none;
+
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+
+        .accroche {
+            max-width: 100%;
+        }
+
+
+
+        .text_accroche {
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+
+    @media screen and (min-width: 430px) {
+        .menu {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 430px) {
+    .menu {
+        display: none;
+    }
+
+    .liens_in {
+        gap: 5rem;
+    }
+
+    .accroche {
+        max-width: 100%;
+    }
+
+    .me {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .menu {
+        display: none;
+    }
+
+
+}
