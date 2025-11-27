@@ -1,3 +1,4 @@
+@use '../abstracts/variables' as var;
 @media screen and (max-width: 425px) {
 
     .liens {
@@ -16,8 +17,6 @@
             max-width: 100%;
         }
 
-
-
         .text_accroche {
             &:hover {
                 transform: none;
@@ -25,12 +24,20 @@
         }
     }
 
-    @media screen and (min-width: 430px) {
-        .menu {
-            display: none;
-        }
+    .footer a {
+        left: 15%;
+        bottom: 0;
+        color: var.$secondary-color;
     }
 }
+
+
+@media screen and (min-width: 430px) {
+    .menu {
+        display: none;
+    }
+}
+
 
 @media screen and (max-width: 768px) and (min-width: 430px) {
     .menu {
@@ -47,6 +54,11 @@
 
     .me {
         width: 60%;
+    }
+
+    .footer a {
+        left: 20%;
+
     }
 }
 

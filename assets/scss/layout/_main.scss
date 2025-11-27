@@ -1,5 +1,10 @@
  @use '../abstracts/variables' as var;
 
+ .motivation,
+ .projet,
+ .conclusion {
+     display: none;
+ }
 
  .presentation {
      position: absolute;
@@ -14,7 +19,7 @@
 
 
      .accroche {
-         border: 2px solid red;
+         border: 2px solid var.$secondary-color;
          max-width: 40%;
          backdrop-filter: blur(30px);
 
