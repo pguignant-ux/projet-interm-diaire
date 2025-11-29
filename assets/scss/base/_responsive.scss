@@ -1,48 +1,63 @@
 @use '../abstracts/variables' as var;
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 740px) {
 
-    .liens {
+    .liens_in,
+    .liens_2 {
         display: none;
     }
 
     .presentation {
-        position: static;
-        transform: none;
-
+        gap: 0;
         flex-direction: column;
-        max-width: 100%;
-        width: 100%;
 
         .accroche {
-            max-width: 100%;
+            width: auto;
+            gap: 0%;
+
         }
 
-        .text_accroche {
-            &:hover {
-                transform: none;
+
+        .pub {
+            text-align: center;
+
+            .slogan {
+                transform: rotate(15deg);
             }
         }
+
+        .me {
+            width: 50%;
+        }
+    }
+
+    .me_proj {
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
     }
 
     .footer a {
         left: 15%;
         bottom: 0;
-        color: var.$secondary-color;
+
     }
+
+}
+
+#link a,
+#git a {
+    font-size: 2rem;
+    bottom: 50%;
 }
 
 
 @media screen and (min-width: 430px) {
-    .menu {
-        display: none;
-    }
+    .menu {}
 }
 
 
-@media screen and (max-width: 768px) and (min-width: 430px) {
-    .menu {
-        display: none;
-    }
+@media screen and (max-width: 740px) and (min-width: 430px) {
+    .menu {}
 
     .liens_in {
         gap: 5rem;
@@ -65,6 +80,11 @@
 @media screen and (min-width: 769px) {
     .menu {
         display: none;
+    }
+
+    .liens_in,
+    .liens_2 {
+        gap: 5rem;
     }
 
 

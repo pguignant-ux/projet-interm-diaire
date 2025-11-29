@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
 
 <body class="contenair">
@@ -14,53 +15,74 @@
     <section class="carte">
         <header>
             <div class="menu">
-
+                <div id="big_mac ">
+                    <img src="assets/img/burger.png " id="clic" onclick="openMenuMobile()" alt="logo burger">
+                </div>
+                <a id="close" href="#" onclick="closeMenuMobile()">X</a>
                 <ul class="elements">
-
-                    <li><a href="#">Motivation</a></li>
-                    <li><a href="#">Projet</a></li>
-                    <li><a href="#">Conclusion</a></li>
+                    <li class="burger"><a href="motivation.html">Motivation</a></li>
+                    <li class="burger"><a href="projet.html">Projet</a></li>
+                    <li class="burger"><a href="Autres_service.htm">Service</a></li>
                 </ul>
-
-
             </div>
             </div>
             <nav class="liens">
                 <ul class="liens_in">
 
                     <li><a href="motivation.html">Motivation</a></li>
-                    <li><a href="#">Projet</a></li>
-                    <li><a href="#">Conclusion</a></li>
+                    <li><a href="projet.html">Projet</a></li>
+                    <li><a href="Autres_service.htm">Service</a></li>
                 </ul>
+
             </nav>
         </header>
 
         <section>
             <div class="presentation">
 
+
                 <div class="accroche">
-                    <p class="text_accroche">
-                        Développement web : transformez vos idées et rêves en solutions numériques. Donnez vie à
-                        vos
-                        projets les plus audacieux et touchez du doigt l’innovation.
-                    </p>
-                    <p class="motivation">motivation</p>
-                    <p class="projet">projet</p>
-                    <p class="conclusion">conclusion</p>
+                    <div class="text_accroche">
+                        <p class="welcom"> Bienvenue</p>
+                    </div>
+                    <div class="name">
+                        <p class="nom"> je me prénome Patrice ! </p>
+                    </div>
+                    <div class="pub">
+                        <p class="slogan"> J' ai votre solution ! </p>
+                    </div>
                 </div>
-
-                <div class="me">
-                    <img src="assets/img/moi.cartoon.png" alt="dessin de Patrice">
+                <div>
+                    <div class="me">
+                        <img src="assets/img/moi.cartoon.png" alt="dessin de Patrice">
+                    </div>
                 </div>
-
             </div>
+
 
         </section>
     </section>
-    <footer class="footer">
-        <a href="#">Contact</a>
-    </footer>
+    <section>
+        <div id="date">
 
+            <div>
+                <h3>Nous sommes le :</h3>
+            </div>
+
+            <div id="divDateJour"></div>
+            <div id="divBoiteBtn">
+                <button id="btnQF" type="button">La phrase du jour</button>
+            </div>
+            <div id="divConseil"></div>
+        </div>
+
+    </section>
+    <section>
+        <footer class="footer">
+            <a href="contact.html">Contact</a>
+        </footer>
+    </section>
+    <script src="script.js"></script>
 </body>
 
 </html>

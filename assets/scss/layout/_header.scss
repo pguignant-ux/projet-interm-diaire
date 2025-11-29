@@ -2,20 +2,67 @@
 
  .menu {
      display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
+     margin-left: 1rem;
+     gap: 0.3rem;
 
-     color: white;
-
-     .elements li {
-
-         list-style: none;
-
+     a {
+         color: var.$primary-color;
+         cursor: pointer;
+         transform: translateX(-50vw);
      }
  }
 
- .liens_in {
+ .menu a.open {
+     transform: initial;
+ }
+
+
+ #big_mac {
+     cursor: pointer;
+ }
+
+ #openBtw {
+     color: var.$primary-color ;
+
+ }
+
+ #big_bacon {
+     color: var.$primary-color ;
+ }
+
+ .elements {
+     display: flex;
+     flex-direction: column;
+     list-style: none;
+     padding: 0;
+     transform: translateX(-50vw);
+     transition: 0.3s transform ease-in-out;
+
+     li a {
+         color: var.$primary-color;
+         font-weight: 600;
+         text-decoration: none;
+
+     }
+
+     .burger {
+         margin-bottom: 0.5rem;
+     }
+
+ }
+
+ .elements.open {
+     transform: initial;
+ }
+
+
+
+
+
+
+ .liens_in,
+ .liens_2 {
+
      display: flex;
      gap: 15rem;
      justify-content: center;
@@ -28,21 +75,41 @@
      padding: 1.5rem 1.5rem 1.5rem 1.5rem;
      margin: 0 1rem 0 1.5rem;
      backdrop-filter: blur(10px);
- }
-
- li a {
-     display: inline-block;
-     text-decoration: none;
-     color: var.$primary-color;
-     transition: transform 0.3s ease, color 0.3s ease;
+     transform: translateY(-100%);
+     animation: fadeSlideDown 2s ease-out forwards;
+     transition: transform 0.3s ease;
 
 
-     &:hover {
-         transform: scale(1.3);
-         color: red;
+     li a {
+         display: inline-block;
+         text-decoration: none;
+         color: var.$primary-color;
+         transition: transform 0.3s ease, color 0.3s ease;
 
+
+         &:hover {
+             transform: scale(1.3);
+             color: red;
+
+
+
+         }
 
 
      }
 
+ }
+
+
+
+ @keyframes fadeSlideDown {
+     0% {
+         opacity: 0;
+         transform: translateY(-100%);
+     }
+
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
  }

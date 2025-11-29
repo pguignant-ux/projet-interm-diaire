@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body class="contenair">
+    <video class="video" src="assets/video/video_1.mp4" autoplay muted loop></video>
+
+    <section class="carte">
+        <header>
+            <div class="menu">
+                <div id="big_mac ">
+                    <img src="assets/img/burger.png " id="clic" onclick="openMenuMobile()" alt="logo burger">
+                </div>
+                <a id="close" href="#" onclick="closeMenuMobile()">X</a>
+                <ul class="elements">
+                    <li class="burger"><a href="motivation.html">Motivation</a></li>
+                    <li class="burger"><a href="projet.html">Projet</a></li>
+                    <li class="burger"><a href="Autres_service.htm">Service</a></li>
+                    <li class="burger"> <a href="index.html">Acceuil</a></li>
+                </ul>
+
+
+
+            </div>
+            </div>
+            <nav class="liens">
+                <ul class="liens_in .liens_2">
+                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="motivation.html">Motivation</a></li>
+                    <li><a href="projet.html">Projet</a></li>
+                    <li><a href="Autres_service.htm">Service</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <div id="formulaire">
+                <form action="#" method="post">
+                    <div id="for_prenom">
+
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+
+                    <div id="for_nom">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+
+                    <div id="for_email">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div id="for_message">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <div>
+
+                            <button type="submit">Envoyer</button>
+                        </div>
+
+                </form>
+
+            </div>
+        </section>
+        <section>
+            <footer>
+                <div id="liens_footer">
+                    <ul>
+                        <div>
+                            <li id="link"><a
+                                    href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">Linkedin</a>
+                            </li>
+                        </div>
+                        <div>
+                            <li id="git"><a href="https://github.com/pguignant-ux">github</a>
+                            </li>
+                        </div>
+                    </ul>
+
+
+                </div>
+            </footer>
+        </section>
+
+
+</body>
+
+</html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>motivation</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="script.js"></script>
 </head>
 
 <body class="contenair">
@@ -14,12 +15,16 @@
     <section class="carte">
         <header>
             <div class="menu">
-
+                <div id="big_mac ">
+                    <img src="assets/img/burger.png " id="clic" onclick="openMenuMobile()" alt="logo burger">
+                </div>
+                <a id="close" href="#" onclick="closeMenuMobile()">X</a>
                 <ul class="elements">
-                    <li><a href="">Acceuil</a></li>
-                    <li><a href="#">Projet</a></li>
-                    <li><a href="#">Conclusion</a></li>
+                    <li class="burger"><a href="index.html">Acceuil</a></li>
+                    <li class="burger"><a href="projet.html">Projet</a></li>
+                    <li class="burger"><a href="Autres_service.htm">Service</a></li>
                 </ul>
+
 
 
             </div>
@@ -27,8 +32,8 @@
             <nav class="liens">
                 <ul class="liens_in">
                     <li><a href="index.html">Acceuil</a></li>
-                    <li><a href="#">Projet</a></li>
-                    <li><a href="#">Conclusion</a></li>
+                    <li><a href="projet.html">Projet</a></li>
+                    <li><a href="Autres_service.htm">Services</a></li>
                 </ul>
             </nav>
         </header>
@@ -37,30 +42,28 @@
             <div class="presentation">
 
                 <div class="accroche">
-                    <p class="text_accroche">
-                        l'informatique sous tout ses coutures <br>
-                        <br>
-                        les defis et les casse tête. <br>
-                        <br>
-                        Se réinventer sainement. <br>
-                        <br>
-                        cap sur le bien-être <br>
-
-                    </p>
-
-                    <p class="conclusion">conclusion</p>
+                    <div class="text_accroche">
+                        <p class="welcom"> je transforme vos idées en réalité</p>
+                    </div>
+                    <div class="name">
+                        <p class="nom"> Mon travail votre futur ! </p>
+                    </div>
+                    <div class="pub">
+                        <p class="slogan"> Créer, imaginer, captiver. </p>
+                    </div>
                 </div>
+                <div>
 
-                <div class="me">
-                    <img src="assets/img/result_motivation.jpg" alt="dessin de Patrice">
+                    <div class="me">
+                        <img src="assets/img/result_motivation.jpg" class="hero" alt="dessin de Patrice">
+                    </div>
+
                 </div>
-
-            </div>
 
         </section>
     </section>
     <footer class="footer">
-        <a href="#">Contact</a>
+        <a href="contact.html">Contact</a>
     </footer>
 
 </body>

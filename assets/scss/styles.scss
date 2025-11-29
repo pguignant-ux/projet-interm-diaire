@@ -1,10 +1,9 @@
 @use "layout/body";
 @use "layout/navbar";
-@use "layout/header.scss";
+@use "layout/header";
 @use "layout/main";
 @use 'layout/footer';
-//
-@use "pages/motivation";
+@use 'layout/contact';
 //
 @use "base/fonts";
 @use "base/base";

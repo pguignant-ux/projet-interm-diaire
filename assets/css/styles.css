@@ -1,3 +1,8 @@
+body {
+  padding-top: 1rem;
+  background-color: black;
+}
+
 .video {
   position: fixed;
   width: 100%;
@@ -13,16 +18,54 @@
 
 .menu {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  margin-left: 1rem;
+  gap: 0.3rem;
 }
-.menu .elements li {
-  list-style: none;
+.menu a {
+  color: #F2E7B6;
+  cursor: pointer;
+  transform: translateX(-50vw);
 }
 
-.liens_in {
+.menu a.open {
+  transform: initial;
+}
+
+#big_mac {
+  cursor: pointer;
+}
+
+#openBtw {
+  color: #F2E7B6;
+}
+
+#big_bacon {
+  color: #F2E7B6;
+}
+
+.elements {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  transform: translateX(-50vw);
+  transition: 0.3s transform ease-in-out;
+}
+.elements li a {
+  color: #F2E7B6;
+  font-weight: 600;
+  text-decoration: none;
+}
+.elements .burger {
+  margin-bottom: 0.5rem;
+}
+
+.elements.open {
+  transform: initial;
+}
+
+.liens_in,
+.liens_2 {
   display: flex;
   gap: 15rem;
   justify-content: center;
@@ -35,61 +78,136 @@
   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   margin: 0 1rem 0 1.5rem;
   backdrop-filter: blur(10px);
+  transform: translateY(-100%);
+  animation: fadeSlideDown 2s ease-out forwards;
+  transition: transform 0.3s ease;
 }
-
-li a {
+.liens_in li a,
+.liens_2 li a {
   display: inline-block;
   text-decoration: none;
   color: #F2E7B6;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-li a:hover {
+.liens_in li a:hover,
+.liens_2 li a:hover {
   transform: scale(1.3);
   color: red;
 }
 
-.motivation,
-.projet,
-.conclusion {
-  display: none;
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 .presentation {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
-  justify-content: center;
   align-items: center;
-  max-width: 100%;
-  gap: 5rem;
+  justify-content: center;
+  height: 50%;
+  gap: 50px;
+  overflow: hidden;
 }
 .presentation .accroche {
-  border: 2px solid #D7B6F2;
-  max-width: 40%;
-  backdrop-filter: blur(30px);
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  color: #F2E7B6;
+  gap: 1rem;
 }
 .presentation .accroche .text_accroche {
-  color: #F2E7B6;
-  font-size: 1.5rem;
-  flex-wrap: wrap;
-  margin: 1.5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  transform: translateX(-120vw);
+  animation: slideText 1.2s ease-out forwards;
 }
-.presentation .accroche .text_accroche:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+.presentation .accroche .welcom {
+  transform: rotate(10deg);
+  backdrop-filter: blur(10px);
 }
-.presentation .me-img {
-  max-width: 100%;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
+.presentation .name {
+  text-align: end;
+  font-size: 2rem;
+  transform: translateX(-120vw);
+  animation: slideText 2s ease-out forwards;
 }
-.presentation .me {
-  align-items: center;
-  width: 100%;
+.presentation .nom {
+  transform: rotate(-10deg);
+  backdrop-filter: blur(10px);
+}
+.presentation .pub {
+  text-align: c;
+  font-size: 2rem;
+  transform: translateX(-120vw);
+  animation: slideText 2.8s ease-out forwards;
+}
+.presentation .pub .slogan {
+  transform: rotate(30deg);
+  backdrop-filter: blur(5px);
+}
+
+.me {
+  transform: translateX(120vw);
+  animation: slideImg 2s ease-out forwards;
+  animation-delay: 0.25s;
+}
+.me .me img {
+  width: 60%;
+}
+
+.me_proj {
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.me_proj video {
+  max-width: 300px;
+  height: auto;
   overflow: hidden;
+  transform: translateX(120vw);
+  animation: slideImg 3s ease-out forwards;
+  animation-delay: 0.25s;
+}
+
+.imgp_1 {
+  transform: translateX(120vw);
+  animation: slideImg 1.5s ease-out forwards;
+  animation-delay: 0.25s;
+}
+
+.imgp_2 {
+  transform: translateX(120vw);
+  animation: slideImg 2.5s ease-out forwards;
+  animation-delay: 0.25s;
+}
+
+@keyframes slideText {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideImg {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#date {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5rem;
+  align-items: center;
+  gap: 1rem;
+  color: #F2E7B6;
+  backdrop-filter: blur(1rem);
 }
 
 .footer a {
@@ -99,97 +217,160 @@ li a:hover {
   color: #F2E7B6;
   text-decoration: none;
   font-size: 5rem;
+  transform: translate(-50%, -100vh);
   transition: transform 0.3s ease;
+  animation: slidedown 2.8s ease-out forwards;
 }
 .footer a:hover {
   transform: scale(1.1);
 }
 
-.presentation {
+@keyframes slidedown {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#formulaire {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  gap: 5rem;
-}
-.presentation .accroche {
-  border: 2px solid #D7B6F2;
-  max-width: 40%;
-  backdrop-filter: blur(30px);
-}
-.presentation .accroche .text_accroche {
   color: #F2E7B6;
-  font-size: 1.5rem;
-  flex-wrap: wrap;
-  margin: 1.5rem;
-}
-.presentation .accroche .text_accroche:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-.presentation:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.2rem;
 }
 
-.me-img {
-  max-width: 100%;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-}
-
-.me {
-  align-items: center;
+input,
+textarea {
   width: 100%;
-  overflow: hidden;
+  padding: 15px 0 20px 0;
+  background: rgba(255, 255, 255, 0.3019607843);
+  color: #F2E7B6;
+  font-size: 1rem;
 }
 
-@font-face {
-  font-family: "spice";
-  src: url(../fonts/spice/pice.ttf);
+button {
+  padding-left: 2rem;
+  margin: 10px 0 0 50px;
+  padding: 15px;
+  width: 160px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.5019607843);
+  color: #D7B6F2;
+  transition: all 0.3s ease;
+}
+button:hover {
+  transform: scale(1.2);
+}
+
+#for_prenom {
+  transform: translateX(-120vw);
+  animation: slideText 2s ease-out forwards;
+}
+
+#for_nom {
+  transform: translatex(120vw);
+  animation: slideText 2.2s ease-out forwards;
+}
+
+#for_email {
+  transform: translateY(120vw);
+  animation: slideText 2.5s ease-out forwards;
+}
+
+#for_message {
+  transform: translatey(-120vw);
+  animation: slideText 2.8s ease-out forwards;
+}
+
+#link a {
+  position: fixed;
+  bottom: 46%;
+  left: 5%;
+  color: #F2E7B6;
+  text-decoration: none;
+  font-size: 5rem;
+  transform: translate(-50%, -100vh);
+  transition: transform 0.3s ease;
+  animation: slidedown 2.8s ease-out forwards;
+}
+#link a:hover {
+  transform: scale(1.1);
+}
+
+#git a {
+  position: fixed;
+  bottom: 46%;
+  left: 33%;
+  color: #F2E7B6;
+  text-decoration: none;
+  font-size: 5rem;
+  transform: translate(-50%, -10vh);
+  transition: transform 0.3s ease;
+  animation: slidedown 2.8s ease-out forwards;
+}
+
+@keyframes slidedown {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideText {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 body {
   font-family: "spice", "sans-serif";
   margin: 0;
 }
 
-@media screen and (max-width: 425px) {
-  .liens {
+@media screen and (max-width: 740px) {
+  .liens_in,
+  .liens_2 {
     display: none;
   }
   .presentation {
-    position: static;
-    transform: none;
+    gap: 0;
     flex-direction: column;
-    max-width: 100%;
-    width: 100%;
   }
   .presentation .accroche {
-    max-width: 100%;
+    width: auto;
+    gap: 0%;
   }
-  .presentation .text_accroche:hover {
-    transform: none;
+  .presentation .pub {
+    text-align: center;
+  }
+  .presentation .pub .slogan {
+    transform: rotate(15deg);
+  }
+  .presentation .me {
+    width: 50%;
+  }
+  .me_proj {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
   }
   .footer a {
     left: 15%;
     bottom: 0;
-    color: #D7B6F2;
   }
 }
-@media screen and (min-width: 430px) {
-  .menu {
-    display: none;
-  }
+#link a,
+#git a {
+  font-size: 2rem;
+  bottom: 50%;
 }
-@media screen and (max-width: 768px) and (min-width: 430px) {
-  .menu {
-    display: none;
-  }
+
+@media screen and (max-width: 740px) and (min-width: 430px) {
   .liens_in {
     gap: 5rem;
   }
@@ -206,6 +387,10 @@ body {
 @media screen and (min-width: 769px) {
   .menu {
     display: none;
+  }
+  .liens_in,
+  .liens_2 {
+    gap: 5rem;
   }
 }
 

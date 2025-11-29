@@ -1,7 +1,10 @@
 @use '../abstracts/variables' as var;
 
 
-
+body {
+    padding-top: 1rem;
+    background-color: black;
+}
 
 .video {
     position: fixed;
