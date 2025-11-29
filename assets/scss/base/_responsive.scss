@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as var;
-@media screen and (max-width: 740px) {
+
+@media screen and (max-width: 767px) {
 
     .liens_in,
     .liens_2 {
@@ -7,7 +8,8 @@
     }
 
     .presentation {
-        gap: 0;
+        gap: 0rem;
+        max-width: 100%;
         flex-direction: column;
 
         .accroche {
@@ -37,10 +39,21 @@
     }
 
     .footer a {
+        position: relative;
+
         left: 15%;
         bottom: 0;
 
     }
+
+    #date {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
 
 }
 
@@ -50,17 +63,9 @@
     bottom: 50%;
 }
 
-
-@media screen and (min-width: 430px) {
-    .menu {}
-}
-
-
-@media screen and (max-width: 740px) and (min-width: 430px) {
-    .menu {}
-
-    .liens_in {
-        gap: 5rem;
+@media (min-width: 768px) {
+    .menu {
+        display: none;
     }
 
     .accroche {
@@ -75,17 +80,27 @@
         left: 20%;
 
     }
+
+    .date {
+        padding: 0 0 0 1rem;
+        font-size: 1rem;
+    }
 }
 
-@media screen and (min-width: 769px) {
-    .menu {
-        display: none;
+.liens_in,
+.liens_2 {
+    gap: 5rem;
+}
+
+@media (min-width:1030px) {
+    body {
+        font-size: 2.5rem;
     }
 
-    .liens_in,
-    .liens_2 {
-        gap: 5rem;
+    #date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
     }
-
-
 }

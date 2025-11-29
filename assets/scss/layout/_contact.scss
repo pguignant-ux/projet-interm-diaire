@@ -1,110 +1,115 @@
-@use '../abstracts/variables' as var;
-
-#formulaire {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    color: var.$primary-color;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-    letter-spacing: .2rem;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 15px 0 20px 0;
-    background: #ffffff4d;
-    color: var.$primary-color;
-    font-size: 1rem;
-
-}
+ @use '../abstracts/variables' as var;
+ @use'../components/boutton.scss' as btn;
 
 
-button {
-    padding-left: 2rem;
-    margin: 10px 0 0 50px;
-    padding: 15px;
-    width: 160px;
-    border: none;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 1rem;
-    background: #00000080;
-    color: var.$secondary-color;
-    transition: all 0.3s ease;
+ #formulaire {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+
+     color: var.$primary-color;
+     font-size: 0.9rem;
+     margin-bottom: 2rem;
+     letter-spacing: .2rem;
+ }
+
+ input,
+ textarea {
+     width: 100%;
+     padding: 15px 0 20px 0;
+     background: #ffffff4d;
+     color: var.$primary-color;
+     font-size: 1rem;
+
+ }
+
+ #btnform {
+     display: flex;
+     justify-content: center;
 
 
-    &:hover {
-        transform: scale(1.2);
+     #btn {
+         padding-left: 2rem;
+         margin: 10px 0 0 50px;
+         padding: 15px;
+         width: 160px;
+         border: none;
+         border-radius: 25px;
+         font-weight: 600;
+         font-size: 1rem;
 
-    }
-
-}
-
-#for_prenom {
-    transform: translateX(-120vw);
-    animation: slideText 2.0s ease-out forwards;
-}
-
-#for_nom {
-    transform: translatex(120vw);
-    animation: slideText 2.2s ease-out forwards;
-}
-
-#for_email {
-    transform: translateY(120vw);
-    animation: slideText 2.5s ease-out forwards;
-}
-
-#for_message {
-    transform: translatey(-120vw);
-    animation: slideText 2.8s ease-out forwards;
-}
-
-#link a {
-    position: fixed;
-    bottom: 46%;
-    left: 5%;
-    color: var.$primary-color;
-    text-decoration: none;
-    font-size: 5rem;
-    transform: translate(-50%, -100vh);
-    transition: transform 0.3s ease;
-    animation: slidedown 2.8s ease-out forwards;
+         transition: btn.$btn-transition;
+         font-size: 1.2rem;
+         margin-left: 2rem;
+         color: var.$secondary-color;
+         background: btn.$btn-background;
 
 
-    &:hover {
-        transform: scale(1.1);
-    }
-}
+     }
+ }
 
-#git a {
-    position: fixed;
-    bottom: 46%;
-    left: 33%;
-    color: var.$primary-color;
-    text-decoration: none;
-    font-size: 5rem;
-    transform: translate(-50%, -10vh);
-    transition: transform 0.3s ease;
-    animation: slidedown 2.8s ease-out forwards;
+ #for_prenom {
+     transform: translateX(-120vw);
+     animation: slideText 2.0s ease-out forwards;
+ }
 
-}
+ #for_nom {
+     transform: translateX(120vw);
+     animation: slideText 2.2s ease-out forwards;
+ }
+
+ #for_email {
+     transform: translateY(120vw);
+     animation: slideText 2.5s ease-out forwards;
+ }
+
+ #for_message {
+     transform: translateY(-120vw);
+     animation: slideText 2.8s ease-out forwards;
+ }
+
+ #link a {
+     position: fixed;
+     bottom: 46%;
+     left: 25%;
+     color: var.$primary-color;
+     text-decoration: none;
+     font-size: 5rem;
+     transform: translate(-50%, -100vh);
+     transition: transform 0.3s ease;
+     animation: slidedown 2.8s ease-out forwards;
 
 
-@keyframes slidedown {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+     &:hover {
+         transform: scale(1.1);
+     }
+ }
 
-@keyframes slideText {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+ #git a {
+     position: fixed;
+     bottom: 46%;
+     left: 33%;
+     color: var.$primary-color;
+     text-decoration: none;
+     font-size: 5rem;
+     transform: translate(-50%, -10vh);
+     transition: transform 0.3s ease;
+     animation: slidedown 2.8s ease-out forwards;
+
+ }
+
+
+ @keyframes slidedown {
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
+
+ @keyframes slideText {
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
