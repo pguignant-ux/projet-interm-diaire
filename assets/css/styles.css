@@ -317,9 +317,14 @@ textarea {
   animation: slideText 2.8s ease-out forwards;
 }
 
+.link {
+  position: fixed;
+  bottom: 50%;
+  list-style: none;
+}
+
 #link a {
   position: fixed;
-  bottom: 46%;
   left: 25%;
   color: #F2E7B6;
   text-decoration: none;
@@ -328,17 +333,25 @@ textarea {
   transition: transform 0.3s ease;
   animation: slidedown 2.8s ease-out forwards;
 }
-#link a:hover {
-  transform: scale(1.1);
-}
 
 #git a {
   position: fixed;
-  bottom: 46%;
-  left: 33%;
+  left: 40%;
   color: #F2E7B6;
   text-decoration: none;
   font-size: 5rem;
+  transform: translate(-50%, -10vh);
+  transition: transform 0.3s ease;
+  animation: slidedown 2.8s ease-out forwards;
+}
+
+#cv a {
+  position: fixed;
+  bottom: 49.75%;
+  left: 9.5%;
+  color: #F2E7B6;
+  text-decoration: none;
+  font-size: 2rem;
   transform: translate(-50%, -10vh);
   transition: transform 0.3s ease;
   animation: slidedown 2.8s ease-out forwards;
